@@ -1,9 +1,15 @@
+button.addEventListener("click", action)
 
-let somme = (nbr1, nbr2) => {
-    console.log(nbr1, nbr2)
-    var sum;
-    nbr1 = Number(nbr1)
-    nbr2 = Number(nbr2)
-    sum = nbr1 * nbr2;
-    document.getElementById("sum").value = sum;
+let multiply = (number1, number2) => {
+    if (isNaN(number1) || isNaN(number2)){
+        return "Veuillez écrire un nombre"
+    }else{
+        return number1 * number2       
+    }
+}
+
+function action() {
+    let p = document.createElement("p")
+    p.innerText = multiply(number1.value, number2.value)
+    document.body.append(p)
 }
